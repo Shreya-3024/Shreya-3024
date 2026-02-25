@@ -1,199 +1,700 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shreya Prajapati | Full Stack Developer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shreya Prajapati · full‑stack & snake</title>
+  <!-- Google Font & Font Awesome for icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(-45deg, #0b0f1c, #1f1a3a, #2e1452, #4b1e4b);
+      background-size: 400% 400%;
+      animation: gradientBG 14s ease infinite;
+      overflow: hidden;
+      color: #f0f0f0;
+      padding: 1rem;
+    }
 
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
-body{
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:linear-gradient(-45deg,#0f0c29,#302b63,#24243e,#1a1a40);
-  background-size:400% 400%;
-  animation:gradient 12s ease infinite;
-  overflow:hidden;
-  color:white;
-}
+    /* floating orbs with new green/pink/purple vibe */
+    .floating-orb {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle at 30% 30%, rgba(200, 255, 200, 0.25), rgba(255, 105, 180, 0.2), rgba(170, 70, 230, 0.3));
+      border-radius: 50%;
+      filter: blur(40px);
+      animation: floatBlob 12s infinite alternate;
+      z-index: 0;
+    }
 
-@keyframes gradient{
-  0%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-  100%{background-position:0% 50%;}
-}
+    .floating-orb:nth-child(1) { top: 2%; left: 5%; width: 280px; height: 280px; }
+    .floating-orb:nth-child(2) { bottom: 0; right: 2%; width: 340px; height: 340px; animation-delay: -3s; background: radial-gradient(circle, #ff80bf60, #b347ea60, #62e06260); }
+    .floating-orb:nth-child(3) { top: 20%; right: 15%; width: 200px; height: 200px; background: #d48cfc80; filter: blur(50px); }
 
-.container{
-  perspective:1000px;
-}
+    @keyframes floatBlob {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(-3%, -5%) scale(1.2); }
+    }
 
-.card{
-  width:400px;
-  height:520px;
-  background:rgba(255,255,255,0.06);
-  backdrop-filter:blur(20px);
-  border-radius:20px;
-  padding:30px;
-  text-align:center;
-  box-shadow:0 0 40px rgba(138,43,226,0.6);
-  transition:transform 0.2s ease;
-}
+    .container {
+      perspective: 1200px;
+      z-index: 10;
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
 
-.card h1{
-  font-size:28px;
-  font-weight:700;
-  background:linear-gradient(90deg,#00f7ff,#a855f7);
-  -webkit-background-clip:text;
-  color:transparent;
-}
+    /* ----- MAIN PROFILE CARD (left) ----- */
+    .card {
+      width: 400px;
+      background: rgba(25, 20, 35, 0.4);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 32px;
+      padding: 2rem 1.8rem;
+      box-shadow: 0 30px 50px rgba(156, 39, 176, 0.5), 0 0 0 2px rgba(255, 105, 180, 0.2) inset, 0 0 30px #a3e63580;
+      transition: transform 0.1s ease, box-shadow 0.3s;
+      border: 1px solid rgba(255, 200, 240, 0.3);
+      text-align: center;
+    }
 
-.card h3{
-  margin-top:8px;
-  font-weight:400;
-  color:#ccc;
-}
+    .card:hover {
+      box-shadow: 0 35px 60px #c084fc, 0 0 25px #f0f, 0 0 15px #0ff;
+    }
 
-.skills{
-  margin-top:25px;
-}
+    .card h1 {
+      font-size: 2.1rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #b0ffb0, #ffb3ff, #c77dff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: 0.5px;
+      text-shadow: 0 0 8px #ff69b4;
+    }
 
-.skills span{
-  display:inline-block;
-  padding:8px 12px;
-  margin:6px;
-  background:rgba(255,255,255,0.1);
-  border-radius:15px;
-  font-size:13px;
-  transition:0.3s;
-}
+    .card h3 {
+      font-weight: 300;
+      color: #ddd;
+      border-bottom: 1px dashed #ff99ff;
+      padding-bottom: 0.6rem;
+      margin-bottom: 1.2rem;
+    }
 
-.skills span:hover{
-  background:#a855f7;
-  transform:scale(1.1);
-}
+    .section-title {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin: 1.5rem 0 0.5rem;
+      color: #b4ff9e;
+      text-transform: uppercase;
+      background: rgba(0,0,0,0.2);
+      display: inline-block;
+      padding: 0.1rem 1.2rem;
+      border-radius: 40px;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 0 10px #f0f;
+    }
 
-.section-title{
-  margin-top:25px;
-  font-size:16px;
-  color:#00f7ff;
-  font-weight:600;
-}
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 0.6rem 0 0.2rem;
+    }
 
-.btn{
-  margin-top:25px;
-  padding:12px 25px;
-  border:none;
-  border-radius:30px;
-  background:linear-gradient(90deg,#00f7ff,#a855f7);
-  color:black;
-  font-weight:600;
-  cursor:pointer;
-  transition:0.3s;
-}
+    .skills span {
+      background: rgba(255, 215, 255, 0.12);
+      padding: 0.4rem 1rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-weight: 400;
+      border: 1px solid rgba(255, 128, 255, 0.5);
+      backdrop-filter: blur(4px);
+      transition: 0.25s;
+      color: #f2e6ff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
 
-.btn:hover{
-  transform:scale(1.1);
-  box-shadow:0 0 20px #a855f7;
-}
+    .skills span:hover {
+      background: #c084fc;
+      color: black;
+      font-weight: 600;
+      transform: scale(1.08) translateY(-3px);
+      border-color: white;
+      box-shadow: 0 0 20px #ffb3ff, 0 0 30px #90ee90;
+    }
 
-.footer{
-  margin-top:20px;
-  font-size:13px;
-  color:#bbb;
-}
+    /* contact row with phone & email */
+    .contact-row {
+      margin: 1.8rem 0 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 0.85rem;
+      background: rgba(138, 43, 226, 0.2);
+      padding: 0.8rem;
+      border-radius: 50px;
+      border: 1px solid rgba(255,192,203,0.6);
+    }
 
-.floating{
-  position:absolute;
-  width:120px;
-  height:120px;
-  background:rgba(255,255,255,0.05);
-  border-radius:50%;
-  animation:float 6s ease-in-out infinite;
-}
+    .contact-row i {
+      color: #a3ffa3;
+      margin-right: 6px;
+      text-shadow: 0 0 6px magenta;
+    }
 
-.floating:nth-child(1){ top:10%; left:15%; }
-.floating:nth-child(2){ bottom:15%; right:10%; animation-delay:2s;}
+    .contact-row span {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
 
-@keyframes float{
-  0%{transform:translateY(0);}
-  50%{transform:translateY(-20px);}
-  100%{transform:translateY(0);}
-}
+    /* social / coding profiles */
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.1rem;
+      margin: 1.2rem 0 1.2rem;
+    }
 
-</style>
+    .social-icon {
+      background: rgba(255, 255, 255, 0.06);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: white;
+      transition: 0.2s;
+      border: 1px solid rgba(255, 200, 255, 0.4);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      backdrop-filter: blur(5px);
+      text-decoration: none;
+    }
+
+    .social-icon:hover {
+      background: linear-gradient(145deg, #fa6cb9, #b76eff);
+      transform: scale(1.15) rotate(5deg);
+      border-color: white;
+      box-shadow: 0 0 30px #ff69b4, 0 0 30px #90ee90;
+    }
+
+    .btn {
+      margin: 0.5rem 0 1rem;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 60px;
+      background: linear-gradient(135deg, #9c6eff, #ff77aa);
+      color: #0a0a0a;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.25s;
+      box-shadow: 0 8px 20px rgba(181, 68, 254, 0.7);
+      border: 1px solid rgba(255,255,255,0.5);
+    }
+
+    .btn i {
+      margin-right: 8px;
+    }
+
+    .btn:hover {
+      transform: scale(1.07);
+      background: linear-gradient(135deg, #ff77aa, #9c6eff);
+      box-shadow: 0 0 35px #f090ff, 0 0 60px #00ffaa70;
+    }
+
+    .footer-note {
+      font-size: 0.7rem;
+      color: #ccc;
+      border-top: 1px solid #f09f;
+      padding-top: 1rem;
+      margin-top: 0.8rem;
+    }
+
+    /* ----- SNAKE GAME CARD (right) ----- */
+    .game-card {
+      width: 340px;
+      background: rgba(12, 10, 20, 0.5);
+      backdrop-filter: blur(18px);
+      border-radius: 40px;
+      padding: 1.8rem 1.5rem;
+      box-shadow: 0 30px 40px #301934, 0 0 0 2px #d88eff40 inset, 0 0 40px #4eff8f;
+      border: 1px solid rgba(250, 150, 250, 0.5);
+      transition: 0.2s;
+      text-align: center;
+    }
+
+    .game-card:hover {
+      box-shadow: 0 0 50px #ffb3ff, 0 0 30px #b5ff9f;
+    }
+
+    .game-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      background: linear-gradient(145deg, #b4ffc4, #dbb3ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    .snake-canvas-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    canvas#snakeCanvas {
+      background: #0b0014;
+      border-radius: 30px;
+      box-shadow: 0 0 0 3px #c154f0, 0 20px 30px black;
+      width: 240px;
+      height: 240px;
+      image-rendering: pixelated;
+    }
+
+    .score-box {
+      display: flex;
+      justify-content: space-between;
+      margin: 1rem 0.5rem 0.8rem;
+      font-weight: 600;
+      color: #fff0c0;
+      background: rgba(128,0,128,0.4);
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      font-size: 1.1rem;
+      border: 1px solid #f6f;
+    }
+
+    .game-controls {
+      display: flex;
+      gap: 0.8rem;
+      justify-content: center;
+    }
+
+    .game-btn {
+      background: rgba(255, 192, 255, 0.2);
+      border: 1px solid #f7b3ff;
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 40px;
+      font-weight: 600;
+      backdrop-filter: blur(6px);
+      transition: 0.2s;
+      cursor: pointer;
+    }
+
+    .game-btn:hover {
+      background: #c77dff;
+      color: black;
+      border-color: #90ee90;
+      box-shadow: 0 0 25px lime;
+    }
+
+    .footer {
+      font-size: 0.75rem;
+      margin-top: 1rem;
+      color: #cdb5ff;
+    }
+
+    /* tilt responsiveness */
+    @media (max-width: 750px) {
+      .container { flex-direction: column; }
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="floating"></div>
-<div class="floating"></div>
+  <!-- abstract floating blobs (green, pink, purple) -->
+  <div class="floating-orb"></div>
+  <div class="floating-orb"></div>
+  <div class="floating-orb"></div>
 
-<div class="container">
-  <div class="card" id="card">
-    <h1>Shreya Prajapati</h1>
-    <h3>Full Stack Developer (MERN) | AI Enthusiast</h3>
+  <div class="container">
+    <!-- LEFT SIDE: PROFILE CARD -->
+    <div class="card" id="tiltCard">
+      <h1>Shreya Prajapati</h1>
+      <h3>⚡ MERN · AI · DSA ⚡</h3>
 
-    <div class="section-title">Core Skills</div>
-    <div class="skills">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-      <span>React</span>
-      <span>Node.js</span>
-      <span>Express</span>
-      <span>MongoDB</span>
+      <!-- contact: phone & email (with icons) -->
+      <div class="contact-row">
+        <span><i class="fas fa-phone-alt"></i> +91 8470923024</span>
+        <span><i class="fas fa-envelope"></i> shreya3024@gmail.com</span>
+      </div>
+
+      <!-- profile links (leetcode, codeforces, linkedin, geeksforgeeks) -->
+      <div class="social-links">
+        <a href="https://leetcode.com/u/shreya3024_/" target="_blank" class="social-icon"><i class="fas fa-code"></i></a>
+        <a href="https://codeforces.com/profile/Lily45" target="_blank" class="social-icon"><i class="fas fa-laptop-code"></i></a>
+        <a href="https://www.linkedin.com/in/shreya-prajapati-5185ab274/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.geeksforgeeks.org/profile/shreyanhv4" target="_blank" class="social-icon"><i class="fas fa-graduation-cap"></i></a>
+      </div>
+
+      <div class="section-title">💻 core skills</div>
+      <div class="skills">
+        <span>HTML5</span> <span>CSS3</span> <span>JavaScript</span> <span>React</span>
+        <span>Node.js</span> <span>Express</span> <span>MongoDB</span>
+      </div>
+
+      <div class="section-title">⚙️ strong in</div>
+      <div class="skills">
+        <span>Java</span> <span>C++</span> <span>DSA</span> <span>OOP</span>
+        <span>DBMS</span> <span>OS</span> <span>CN</span>
+      </div>
+
+      <div class="section-title">🌱 learning</div>
+      <div class="skills">
+        <span>DevOps</span> <span>Cloud</span> <span>System Design</span> <span>Kubernetes</span>
+      </div>
+
+      <!-- GitHub button (with icon) -->
+      <button class="btn" onclick="window.open('https://github.com/Shreya-3024', '_blank')">
+        <i class="fab fa-github"></i> GitHub Profile
+      </button>
+
+      <!-- small footer -->
+      <div class="footer-note">
+        <i class="fas fa-crown" style="color: gold;"></i> building scalable & intelligent systems
+      </div>
     </div>
 
-    <div class="section-title">Strong In</div>
-    <div class="skills">
-      <span>Java</span>
-      <span>C++</span>
-      <span>DSA</span>
-      <span>OOP</span>
-      <span>DBMS</span>
-      <span>Computer Fundamentals</span>
-    </div>
+    <!-- RIGHT SIDE: SNAKE GAME with retro style -->
+    <div class="game-card">
+      <div class="game-title">🐍 SNAKE GAME · GRID</div>
+      <div class="snake-canvas-container">
+        <canvas id="snakeCanvas" width="300" height="300"></canvas>
+      </div>
 
-    <div class="section-title">Learning</div>
-    <div class="skills">
-      <span>DevOps Basics</span>
-      <span>Cloud Computing</span>
-      <span>System Design</span>
-    </div>
+      <div class="score-box">
+        <span>🍎 <span id="scoreDisplay">0</span></span>
+        <span>🔥 BEST <span id="highScoreDisplay">0</span></span>
+      </div>
 
-    <button class="btn" onclick="window.location.href='https://github.com/Shreya-3024'">
-      Visit GitHub
-    </button>
-
-    <div class="footer">
-      Building scalable & intelligent web systems 🚀
+      <div class="game-controls">
+        <button class="game-btn" id="restartSnakeBtn"><i class="fas fa-undo-alt"></i> RESTART</button>
+        <button class="game-btn" id="toggleDirectionBtn">⬆️⬇️</button>
+      </div>
+      <div class="footer">← ↑ → ↓   (click to focus)</div>
     </div>
   </div>
-</div>
 
-<script>
-const card=document.getElementById("card");
+  <!-- interactive tilt + SNAKE GAME SCRIPT -->
+  <script>
+    (function() {
+      // ---- TILT EFFECT (profile card) ----
+      const card = document.getElementById('tiltCard');
+      if (card) {
+        document.addEventListener('mousemove', (e) => {
+          let x = (window.innerWidth / 2 - e.pageX) / 30;
+          let y = (window.innerHeight / 2 - e.pageY) / 30;
+          card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+        });
+        document.addEventListener('mouseleave', () => {
+          card.style.transform = 'rotateY(0deg) rotateX(0deg)';
+        });
+      }
 
-document.addEventListener("mousemove",(e)=>{
-  let x=(window.innerWidth/2 - e.pageX)/25;
-  let y=(window.innerHeight/2 - e.pageY)/25;
-  card.style.transform=`rotateY(${x}deg) rotateX(${y}deg)`;
-});
+      // ---- SNAKE GAME (canvas) ----
+      const canvas = document.getElementById('snakeCanvas');
+      const ctx = canvas.getContext('2d');
+      const scoreSpan = document.getElementById('scoreDisplay');
+      const highScoreSpan = document.getElementById('highScoreDisplay');
 
-document.addEventListener("mouseleave",()=>{
-  card.style.transform="rotateY(0deg) rotateX(0deg)";
-});
-</script>
+      const GRID_SIZE = 15;          // 15x15 grid (cell size 20px)
+      const CELL_SIZE = canvas.width / GRID_SIZE; // 20px
+
+      let snake = [
+        {x: 7, y: 7},
+        {x: 6, y: 7},
+        {x: 5, y: 7}
+      ];
+      let direction = 'RIGHT'; // current moving direction
+      let nextDirection = 'RIGHT';
+      let food = {x: 10, y: 10};
+      let gameOver = false;
+      let winFlag = false;
+      let score = 0;
+      let highScore = localStorage.getItem('snakeHighScore') ? parseInt(localStorage.getItem('snakeHighScore')) : 0;
+      highScoreSpan.innerText = highScore;
+
+      let gameInterval = null;
+      const SPEED = 160; // ms
+
+      // helper: generate random food not colliding with snake
+      function generateRandomFood() {
+        const maxAttempts = 1000;
+        for (let attempt = 0; attempt < maxAttempts; attempt++) {
+          const randX = Math.floor(Math.random() * GRID_SIZE);
+          const randY = Math.floor(Math.random() * GRID_SIZE);
+          if (!snake.some(seg => seg.x === randX && seg.y === randY)) {
+            food = {x: randX, y: randY};
+            return true;
+          }
+        }
+        // if board nearly full -> check for win condition (snake length = 225)
+        if (snake.length >= GRID_SIZE * GRID_SIZE) {
+          winFlag = true;
+          gameOver = true;
+          return false;
+        }
+        // no free cell -> try to find manually
+        for (let i = 0; i < GRID_SIZE; i++) {
+          for (let j = 0; j < GRID_SIZE; j++) {
+            if (!snake.some(seg => seg.x === i && seg.y === j)) {
+              food = {x: i, y: j};
+              return true;
+            }
+          }
+        }
+        gameOver = true; // board completely full
+        return false;
+      }
+
+      // draw everything
+      function drawGame() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // draw grid (very subtle)
+        ctx.strokeStyle = '#b664e0';
+        ctx.lineWidth = 0.5;
+        for (let i = 0; i <= GRID_SIZE; i++) {
+          ctx.beginPath();
+          ctx.strokeStyle = '#b284f0';
+          ctx.globalAlpha = 0.3;
+          ctx.moveTo(i * CELL_SIZE, 0);
+          ctx.lineTo(i * CELL_SIZE, canvas.height);
+          ctx.stroke();
+          ctx.moveTo(0, i * CELL_SIZE);
+          ctx.lineTo(canvas.width, i * CELL_SIZE);
+          ctx.stroke();
+        }
+        ctx.globalAlpha = 1.0;
+
+        // draw snake (green-pink gradient)
+        snake.forEach((seg, index) => {
+          const x = seg.x * CELL_SIZE;
+          const y = seg.y * CELL_SIZE;
+          const isHead = index === 0;
+          const gradient = ctx.createRadialGradient(x+5, y+5, 2, x+12, y+12, 18);
+          gradient.addColorStop(0, '#b3ffaa');
+          gradient.addColorStop(0.7, '#ffa8e0');
+          ctx.fillStyle = isHead ? '#ffdf79' : gradient;
+          ctx.shadowColor = '#ff69b4';
+          ctx.shadowBlur = 12;
+          ctx.beginPath();
+          ctx.roundRect(x+1, y+1, CELL_SIZE-2, CELL_SIZE-2, 6);
+          ctx.fill();
+        });
+
+        // draw food (apple with purple-pink)
+        ctx.shadowColor = '#f0f';
+        ctx.shadowBlur = 18;
+        ctx.fillStyle = '#ff347f';
+        ctx.beginPath();
+        ctx.arc(food.x * CELL_SIZE + CELL_SIZE/2, food.y * CELL_SIZE + CELL_SIZE/2, 9, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.fillStyle = '#adff2f';
+        ctx.beginPath();
+        ctx.arc(food.x * CELL_SIZE + 10, food.y * CELL_SIZE + 8, 3, 0, 2 * Math.PI);
+        ctx.fill();
+
+        // reset shadow
+        ctx.shadowBlur = 0;
+
+        // game over / win overlay
+        if (gameOver) {
+          ctx.globalAlpha = 0.7;
+          ctx.fillStyle = '#11051d';
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+          ctx.globalAlpha = 1;
+          ctx.fillStyle = 'white';
+          ctx.font = 'bold 22px Poppins';
+          ctx.shadowColor = '#fca4ff';
+          ctx.shadowBlur = 20;
+          ctx.fillText(winFlag ? '✨ YOU WIN ✨' : 'GAME OVER', 35, 150);
+          ctx.shadowBlur = 0;
+        }
+      }
+
+      // helper for rounded rect
+      CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
+        if (w < 2 * r) r = w / 2;
+        if (h < 2 * r) r = h / 2;
+        this.moveTo(x + r, y);
+        this.lineTo(x + w - r, y);
+        this.quadraticCurveTo(x + w, y, x + w, y + r);
+        this.lineTo(x + w, y + h - r);
+        this.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+        this.lineTo(x + r, y + h);
+        this.quadraticCurveTo(x, y + h, x, y + h - r);
+        this.lineTo(x, y + r);
+        this.quadraticCurveTo(x, y, x + r, y);
+        this.closePath();
+        return this;
+      };
+
+      // move snake one step
+      function stepGame() {
+        if (gameOver) {
+          drawGame();
+          return;
+        }
+
+        direction = nextDirection;
+
+        // compute new head
+        const head = snake[0];
+        let newHead = { ...head };
+        if (direction === 'RIGHT') newHead.x += 1;
+        else if (direction === 'LEFT') newHead.x -= 1;
+        else if (direction === 'UP') newHead.y -= 1;
+        else if (direction === 'DOWN') newHead.y += 1;
+
+        // wall wrap? classic game over on wall collision (no wrap)
+        if (newHead.x < 0 || newHead.x >= GRID_SIZE || newHead.y < 0 || newHead.y >= GRID_SIZE) {
+          gameOver = true;
+          drawGame();
+          return;
+        }
+
+        // check if food eaten
+        const isEating = (newHead.x === food.x && newHead.y === food.y);
+
+        // check collision with body (except tail if we move)
+        let snakeWithoutTail = isEating ? snake : snake.slice(0, -1); // if eating, keep tail
+        if (snakeWithoutTail.some(seg => seg.x === newHead.x && seg.y === newHead.y)) {
+          gameOver = true;
+          drawGame();
+          return;
+        }
+
+        // add new head
+        snake = [newHead, ...snake];
+        if (!isEating) {
+          snake.pop(); // remove tail
+        } else {
+          score += 1;
+          scoreSpan.innerText = score;
+          if (score > highScore) {
+            highScore = score;
+            localStorage.setItem('snakeHighScore', highScore);
+            highScoreSpan.innerText = highScore;
+          }
+          // generate new food
+          const success = generateRandomFood();
+          if (!success) {
+            // if no free cell, check win condition inside generate
+            if (snake.length >= GRID_SIZE * GRID_SIZE) {
+              winFlag = true;
+              gameOver = true;
+            } else {
+              gameOver = true; // something went wrong (no free cell)
+            }
+          }
+        }
+
+        drawGame();
+      }
+
+      // reset game
+      function resetGame() {
+        snake = [
+          {x: 7, y: 7},
+          {x: 6, y: 7},
+          {x: 5, y: 7}
+        ];
+        direction = 'RIGHT';
+        nextDirection = 'RIGHT';
+        gameOver = false;
+        winFlag = false;
+        score = 0;
+        scoreSpan.innerText = '0';
+        // generate food not on snake
+        generateRandomFood();
+        drawGame();
+      }
+
+      // start interval
+      function startGameLoop() {
+        if (gameInterval) clearInterval(gameInterval);
+        gameInterval = setInterval(stepGame, SPEED);
+      }
+
+      // keyboard control
+      document.addEventListener('keydown', (e) => {
+        if (gameOver) return;
+        const key = e.key.startsWith('Arrow') ? e.key.slice(5) : '';
+        if (key === 'Up' && direction !== 'DOWN') nextDirection = 'UP';
+        else if (key === 'Down' && direction !== 'UP') nextDirection = 'DOWN';
+        else if (key === 'Left' && direction !== 'RIGHT') nextDirection = 'LEFT';
+        else if (key === 'Right' && direction !== 'LEFT') nextDirection = 'RIGHT';
+      });
+
+      // restart button
+      document.getElementById('restartSnakeBtn').addEventListener('click', () => {
+        resetGame();
+        if (!gameInterval) startGameLoop();
+      });
+
+      // toggle direction not needed, but use as pause/resume fun (extra)
+      document.getElementById('toggleDirectionBtn').addEventListener('click', () => {
+        if (gameInterval) {
+          clearInterval(gameInterval);
+          gameInterval = null;
+        } else {
+          startGameLoop();
+        }
+      });
+
+      // initialise game
+      generateRandomFood();
+      resetGame();
+      startGameLoop();
+
+      // prevent page scrolling with arrow keys
+      window.addEventListener('keydown', (e) => {
+        if (e.key.startsWith('Arrow')) e.preventDefault();
+      }, { passive: false });
+
+    })();
+  </script>
+
+  <!-- additional hover + style consistency -->
+  <script>
+    (function secondaryGlow() {
+      // small enhancement: any icon link opens in new tab (already done)
+    })();
+  </script>
 
 </body>
 </html>

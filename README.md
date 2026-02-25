@@ -1,105 +1,100 @@
-<!-- ===================== ANIMATED BANNER ===================== -->
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=240&text=Shreya%20Prajapati&fontSize=60&fontColor=ffffff&color=gradient&animation=fadeIn&desc=Full%20Stack%20Developer%20%7C%20MERN%20%7C%20AI%20Enthusiast&descAlignY=70" />
-</p>
+# 👩‍💻 Shreya Prajapati - Full Stack Developer Portfolio
 
-<!-- ===================== TYPING ANIMATION ===================== -->
-<h2 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&pause=1000&color=00C2FF&center=true&vCenter=true&width=750&lines=Full+Stack+Web+Developer+(MERN);Data+Structures+%26+Algorithms+Learner;Java+%7C+Computer+Fundamentals;DevOps+%26+Cloud+Computing+Basics;Building+Smart+AI+Powered+Applications" />
-</h2>
+![Profile Banner](https://img.shields.io/badge/Full%20Stack-MERN-blueviolet?style=for-the-badge)
+![AI Enthusiast](https://img.shields.io/badge/AI-Enthusiast-ff69b4?style=for-the-badge)
+![DSA](https://img.shields.io/badge/DSA-Java%20%7C%20C%2B%2B-success?style=for-the-badge)
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Shreya-3024&style=for-the-badge&color=blueviolet" />
-</p>
+## 🌐 Live Preview
+Visit my interactive GitHub profile page: **[Shreya's Portfolio](https://shreya-3024.github.io)** *(update with your actual GitHub Pages link)*
 
----
+## 📌 About Me
 
-## 👩‍💻 About Me
+Hi! I'm **Shreya Prajapati**, a passionate Full Stack Developer specializing in the MERN stack with a strong interest in Artificial Intelligence. I love building scalable web applications and solving complex problems through code.
 
-- 🎓 B.Tech CSE Student  
-- 💻 Full Stack Developer (MERN Stack)  
-- 🧠 Strong in DSA, OOP & DBMS  
-- ☁️ Learning DevOps & Cloud Computing basics  
-- ⚡ Passionate about AI-integrated Web Applications  
-- 🎯 Goal: Secure a strong internship & build scalable systems  
-
----
-
-## 🎮 SKILL PROGRESSION (GAME STYLE)
-
-| Level | Skill | Status |
-|-------|-------|--------|
-| 🟢 Level 1 | HTML • CSS • JavaScript | Completed |
-| 🟢 Level 2 | React (Frontend Development) | Completed |
-| 🟡 Level 3 | Node • Express • MongoDB (Backend) | Improving |
-| 🟡 Level 4 | DSA (Java & C++) | Improving |
-| 🔵 Level 5 | DevOps & Cloud Basics | Learning |
-| 🔵 Level 6 | System Design | Upcoming |
-
----
+- 🔭 Currently working on: MERN Stack Projects & AI Integration
+- 🌱 Learning: DevOps, Cloud Computing, System Design
+- 👯 Looking to collaborate on: Open Source Projects & Hackathons
+- 💬 Ask me about: DSA, Web Development, MERN Stack
 
 ## 🛠️ Tech Stack
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,express,mongodb&theme=dark" />
-  <br/>
-  <img src="https://skillicons.dev/icons?i=java,cpp,python,mysql,git,github,docker,aws&theme=dark" />
-</p>
+### Frontend
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+
+### Backend
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=flat-square&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-404D59?style=flat-square&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white)
+
+### Programming Languages
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=java&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
+
+### Core Subjects
+- Data Structures & Algorithms
+- Object-Oriented Programming
+- Database Management Systems
+- Operating Systems
+- Computer Networks
+
+## 📫 Connect With Me
+
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/shreya3024_/)
+[![Codeforces](https://img.shields.io/badge/Codeforces-445f9d?style=for-the-badge&logo=codeforces&logoColor=white)](https://codeforces.com/profile/Lily45)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shreya-prajapati-5185ab274/)
+[![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-2F8D46?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/profile/shreyanhv4)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Shreya-3024)
+
+## 📞 Contact Information
+
+- **Phone:** +91 8470923024
+- **Email:** shreya3024@gmail.com
+
+## 🎮 Features of My Profile Page
+
+- **Interactive 3D Tilt Card** - Profile card responds to mouse movement
+- **Retro Snake Game** - Playable classic snake game built with canvas
+- **Animated Gradient Background** - Dynamic purple, pink, and green color scheme
+- **Glass Morphism Design** - Modern UI with backdrop blur effects
+- **Responsive Layout** - Works on desktop and mobile devices
+- **Social Media Integration** - Direct links to all coding profiles
+- **Local Storage** - Snake game high score saved in browser
+
+## 🚀 How to Use
+
+1. Clone this repository
+2. Open `index.html` in your browser
+3. Hover over the profile card to see the 3D effect
+4. Play the snake game using arrow keys
+5. Click on any social icon to visit my profiles
+
+## 📊 GitHub Stats
+
+![Shreya's GitHub stats](https://github-readme-stats.vercel.app/api?username=Shreya-3024&show_icons=true&theme=tokyonight)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Shreya-3024&layout=compact&theme=tokyonight)
+
+## 🏆 Achievements
+
+- ⭐ 200+ problems solved on LeetCode
+- 📈 150+ problems solved on GeeksforGeeks
+- 🎯 100+ problems solved on Codeforces
+- 🚀 Built multiple MERN stack projects
+
+## 📝 Latest Projects
+
+1. **E-Commerce Platform** - MERN stack with Redux
+2. **AI Image Generator** - React + OpenAI API
+3. **Snake Game** - Canvas based retro game
+4. **Portfolio Website** - This interactive profile
+
+## 📄 License
+
+© 2024 Shreya Prajapati. All Rights Reserved.
 
 ---
 
-## 📊 GitHub Activity
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Shreya-3024&show_icons=true&theme=github_dark&hide_border=true" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Shreya-3024&theme=github-dark&hide_border=true" width="48%" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Shreya-3024&theme=react-dark&hide_border=true&area=true" />
-</p>
-
----
-
-<h2 align="center">🐍 Contribution Activity</h2>
-<p align="center">
-  <i>Consistency builds mastery 🚀</i>
-</p>
-
-<p align="center">
-  <img 
-    src="https://github.com/Shreya-3024/Shreya-3024/blob/output/github-contribution-grid-snake-dark.svg"
-    width="90%"
-  />
-</p>
-
----
-
-## 💼 Recruiter Snapshot
-
-✔ Full Stack MERN Developer  
-✔ Strong in Java, DSA & OOP  
-✔ DBMS & Computer Fundamentals  
-✔ Basics of DevOps & Cloud Computing  
-✔ AI-based Project Experience  
-✔ Open to internships & entry-level roles  
-
----
-
-## 🌐 Connect With Me
-
-<p align="center">
-  <a href="https://github.com/Shreya-3024">
-    <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github" />
-  </a>
-  <a href="https://www.linkedin.com/in/shreyaPrajapati/">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin" />
-  </a>
-  <a href="mailto:shreya3024@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail" />
-  </a>
-</p>
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=gradient" />
-</p>
+⭐️ From [Shreya-3024](https://github.com/Shreya-3024)

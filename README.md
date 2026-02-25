@@ -5,23 +5,22 @@
 
 <!-- ===================== TYPING ANIMATION ===================== -->
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=900&color=00C2FF&center=true&vCenter=true&width=750&lines=Full+Stack+MERN+Developer;Java+%7C+Data+Structures+%26+Algorithms;DevOps+%26+Cloud+Computing+Basics;Building+Scalable+Web+Applications" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=900&color=FF1493&center=true&vCenter=true&width=750&lines=Full+Stack+MERN+Developer;Java+%7C+Data+Structures+%26+Algorithms;DevOps+%26+Cloud+Basics;Building+Scalable+Web+Applications;Creative+Developer+%F0%9F%9A%80" />
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Shreya-3024&style=for-the-badge&color=blueviolet" />
+  <img src="https://komarev.com/ghpvc/?username=Shreya-3024&style=for-the-badge&color=brightgreen" />
 </p>
 
 ---
 
 ## 👩‍💻 About Me
 
-- 🎓 B.Tech CSE Student  
-- 💻 Full Stack Web Developer (MERN Stack)  
-- 🧠 Strong foundation in Java, DSA & Computer Fundamentals  
-- ☁️ Learning DevOps & Cloud Computing basics  
-- ⚡ Passionate about building scalable & AI-integrated systems  
-- 🎯 Open to internships & entry-level roles  
+- 💻 Full Stack Web Developer (MERN Stack)
+- 🧠 Strong in Java, DSA & DBMS
+- ☁️ Learning DevOps & Cloud Computing Basics
+- 🎮 Love building creative UI & interactive projects
+- 🎯 Open to internships & entry-level opportunities
 
 ---
 
@@ -35,7 +34,7 @@
 
 ---
 
-## 📊 GitHub Stats
+## 📊 GitHub Activity
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=Shreya-3024&show_icons=true&theme=github_dark&hide_border=true" width="48%" />
@@ -48,18 +47,18 @@
 
 ---
 
-## 💼 Core Strengths
+## 💪 Core Strengths
 
 ✔ Full Stack MERN Development  
 ✔ Java & Data Structures  
-✔ DBMS & OOP Concepts  
+✔ OOP & DBMS Concepts  
 ✔ Computer Fundamentals  
 ✔ DevOps & Cloud Basics  
-✔ Problem Solving & Logical Thinking  
+✔ Clean UI & Interactive Design  
 
 ---
 
-## 🌐 Connect With Me
+## 🌐 Coding Profiles
 
 📞 +91 8470923024  
 📧 shreya3024@gmail.com  
@@ -68,6 +67,12 @@
 🔗 [Codeforces](https://codeforces.com/profile/Lily45)  
 🔗 [LinkedIn](https://www.linkedin.com/in/shreya-prajapati-5185ab274/)  
 🔗 [GeeksForGeeks](https://www.geeksforgeeks.org/profile/shreyanhv4)  
+
+---
+
+## 🎯 Career Focus
+
+> Building scalable, intelligent & creative web systems with strong problem-solving foundations.
 
 ---
 

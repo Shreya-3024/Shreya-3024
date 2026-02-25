@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shreya Prajapati | Full Stack Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  height:100vh;
+  background:linear-gradient(-45deg,#0f0c29,#302b63,#24243e,#1a1a40);
+  background-size:400% 400%;
+  animation:gradientBG 10s ease infinite;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  color:white;
+}
+
+@keyframes gradientBG{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+.container{
+  perspective:1000px;
+}
+
+.card{
+  width:380px;
+  height:500px;
+  background:rgba(255,255,255,0.07);
+  backdrop-filter:blur(15px);
+  border-radius:20px;
+  padding:30px;
+  text-align:center;
+  transition:transform 0.2s ease;
+  box-shadow:0 0 40px rgba(138,43,226,0.6);
+}
+
+.card h1{
+  font-size:28px;
+  font-weight:700;
+  background:linear-gradient(90deg,#00f7ff,#a855f7);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.card h3{
+  margin-top:10px;
+  font-weight:400;
+  color:#ccc;
+}
+
+.skills{
+  margin-top:25px;
+}
+
+.skills span{
+  display:inline-block;
+  background:rgba(255,255,255,0.1);
+  padding:8px 12px;
+  margin:5px;
+  border-radius:15px;
+  font-size:13px;
+  transition:0.3s;
+}
+
+.skills span:hover{
+  background:#a855f7;
+  transform:scale(1.1);
+}
+
+.btn{
+  margin-top:30px;
+  padding:12px 25px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(90deg,#00f7ff,#a855f7);
+  color:black;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 20px #a855f7;
+}
+
+.footer{
+  margin-top:25px;
+  font-size:13px;
+  color:#bbb;
+}
+
+.floating{
+  position:absolute;
+  width:100px;
+  height:100px;
+  background:rgba(255,255,255,0.1);
+  border-radius:50%;
+  animation:float 6s ease-in-out infinite;
+}
+
+.floating:nth-child(1){ top:10%; left:20%; }
+.floating:nth-child(2){ bottom:15%; right:15%; animation-delay:2s;}
+
+@keyframes float{
+  0%{transform:translateY(0px);}
+  50%{transform:translateY(-20px);}
+  100%{transform:translateY(0px);}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="floating"></div>
+<div class="floating"></div>
+
+<div class="container">
+  <div class="card" id="card">
+    <h1>Shreya Prajapati</h1>
+    <h3>Full Stack Web Developer | AI Enthusiast</h3>
+
+    <div class="skills">
+      <span>Java</span>
+      <span>C++</span>
+      <span>Python</span>
+      <span>React</span>
+      <span>Node.js</span>
+      <span>MongoDB</span>
+      <span>MySQL</span>
+      <span>Tailwind CSS</span>
+    </div>
+
+    <button class="btn">View My GitHub</button>
+
+    <div class="footer">
+      Building intelligent web systems 🚀
+    </div>
+  </div>
+</div>
+
+<script>
+const card=document.getElementById('card');
+
+document.addEventListener('mousemove',(e)=>{
+  let x=(window.innerWidth/2 - e.pageX)/20;
+  let y=(window.innerHeight/2 - e.pageY)/20;
+  card.style.transform=`rotateY(${x}deg) rotateX(${y}deg)`;
+});
+
+document.addEventListener('mouseleave',()=>{
+  card.style.transform="rotateY(0deg) rotateX(0deg)";
+});
+</script>
+
+</body>
+</html>

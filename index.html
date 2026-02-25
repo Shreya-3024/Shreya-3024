@@ -17,17 +17,17 @@
 
 body{
   height:100vh;
-  background:linear-gradient(-45deg,#0f0c29,#302b63,#24243e,#1a1a40);
-  background-size:400% 400%;
-  animation:gradientBG 10s ease infinite;
   display:flex;
   justify-content:center;
   align-items:center;
+  background:linear-gradient(-45deg,#0f0c29,#302b63,#24243e,#1a1a40);
+  background-size:400% 400%;
+  animation:gradient 12s ease infinite;
   overflow:hidden;
   color:white;
 }
 
-@keyframes gradientBG{
+@keyframes gradient{
   0%{background-position:0% 50%;}
   50%{background-position:100% 50%;}
   100%{background-position:0% 50%;}
@@ -38,15 +38,15 @@ body{
 }
 
 .card{
-  width:380px;
-  height:500px;
-  background:rgba(255,255,255,0.07);
-  backdrop-filter:blur(15px);
+  width:400px;
+  height:520px;
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(20px);
   border-radius:20px;
   padding:30px;
   text-align:center;
-  transition:transform 0.2s ease;
   box-shadow:0 0 40px rgba(138,43,226,0.6);
+  transition:transform 0.2s ease;
 }
 
 .card h1{
@@ -58,7 +58,7 @@ body{
 }
 
 .card h3{
-  margin-top:10px;
+  margin-top:8px;
   font-weight:400;
   color:#ccc;
 }
@@ -69,9 +69,9 @@ body{
 
 .skills span{
   display:inline-block;
-  background:rgba(255,255,255,0.1);
   padding:8px 12px;
-  margin:5px;
+  margin:6px;
+  background:rgba(255,255,255,0.1);
   border-radius:15px;
   font-size:13px;
   transition:0.3s;
@@ -82,8 +82,15 @@ body{
   transform:scale(1.1);
 }
 
+.section-title{
+  margin-top:25px;
+  font-size:16px;
+  color:#00f7ff;
+  font-weight:600;
+}
+
 .btn{
-  margin-top:30px;
+  margin-top:25px;
   padding:12px 25px;
   border:none;
   border-radius:30px;
@@ -100,27 +107,27 @@ body{
 }
 
 .footer{
-  margin-top:25px;
+  margin-top:20px;
   font-size:13px;
   color:#bbb;
 }
 
 .floating{
   position:absolute;
-  width:100px;
-  height:100px;
-  background:rgba(255,255,255,0.1);
+  width:120px;
+  height:120px;
+  background:rgba(255,255,255,0.05);
   border-radius:50%;
   animation:float 6s ease-in-out infinite;
 }
 
-.floating:nth-child(1){ top:10%; left:20%; }
-.floating:nth-child(2){ bottom:15%; right:15%; animation-delay:2s;}
+.floating:nth-child(1){ top:10%; left:15%; }
+.floating:nth-child(2){ bottom:15%; right:10%; animation-delay:2s;}
 
 @keyframes float{
-  0%{transform:translateY(0px);}
+  0%{transform:translateY(0);}
   50%{transform:translateY(-20px);}
-  100%{transform:translateY(0px);}
+  100%{transform:translateY(0);}
 }
 
 </style>
@@ -134,37 +141,56 @@ body{
 <div class="container">
   <div class="card" id="card">
     <h1>Shreya Prajapati</h1>
-    <h3>Full Stack Web Developer | AI Enthusiast</h3>
+    <h3>Full Stack Developer (MERN) | AI Enthusiast</h3>
 
+    <div class="section-title">Core Skills</div>
+    <div class="skills">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>React</span>
+      <span>Node.js</span>
+      <span>Express</span>
+      <span>MongoDB</span>
+    </div>
+
+    <div class="section-title">Strong In</div>
     <div class="skills">
       <span>Java</span>
       <span>C++</span>
-      <span>Python</span>
-      <span>React</span>
-      <span>Node.js</span>
-      <span>MongoDB</span>
-      <span>MySQL</span>
-      <span>Tailwind CSS</span>
+      <span>DSA</span>
+      <span>OOP</span>
+      <span>DBMS</span>
+      <span>Computer Fundamentals</span>
     </div>
 
-    <button class="btn">View My GitHub</button>
+    <div class="section-title">Learning</div>
+    <div class="skills">
+      <span>DevOps Basics</span>
+      <span>Cloud Computing</span>
+      <span>System Design</span>
+    </div>
+
+    <button class="btn" onclick="window.location.href='https://github.com/Shreya-3024'">
+      Visit GitHub
+    </button>
 
     <div class="footer">
-      Building intelligent web systems 🚀
+      Building scalable & intelligent web systems 🚀
     </div>
   </div>
 </div>
 
 <script>
-const card=document.getElementById('card');
+const card=document.getElementById("card");
 
-document.addEventListener('mousemove',(e)=>{
-  let x=(window.innerWidth/2 - e.pageX)/20;
-  let y=(window.innerHeight/2 - e.pageY)/20;
+document.addEventListener("mousemove",(e)=>{
+  let x=(window.innerWidth/2 - e.pageX)/25;
+  let y=(window.innerHeight/2 - e.pageY)/25;
   card.style.transform=`rotateY(${x}deg) rotateX(${y}deg)`;
 });
 
-document.addEventListener('mouseleave',()=>{
+document.addEventListener("mouseleave",()=>{
   card.style.transform="rotateY(0deg) rotateX(0deg)";
 });
 </script>

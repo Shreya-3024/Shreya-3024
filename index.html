@@ -51,6 +51,27 @@
       100% { transform: translateY(0); }
     }
 
+    @keyframes slideInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 40px rgba(138, 43, 226, 0.6), 0 0 20px rgba(0, 247, 255, 0.3); }
+      50% { box-shadow: 0 0 60px rgba(168, 85, 247, 0.8), 0 0 30px rgba(0, 247, 255, 0.5); }
+    }
+
+    @keyframes glowScale {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+
     /* main container with perspective */
     .container {
       perspective: 1000px;
@@ -58,6 +79,7 @@
       z-index: 10;
       width: fit-content;
       margin: 0 auto;
+      animation: slideInDown 0.8s ease-out;
     }
 
     /* main profile card */
@@ -69,8 +91,15 @@
       padding: 28px 24px;
       text-align: center;
       box-shadow: 0 0 40px rgba(138, 43, 226, 0.6);
-      transition: transform 0.2s ease;
+      transition: all 0.3s ease;
       border: 1px solid rgba(255, 255, 255, 0.1);
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 60px rgba(168, 85, 247, 0.9), 0 0 30px rgba(0, 247, 255, 0.6), inset 0 0 20px rgba(168, 85, 247, 0.2);
+      border-color: rgba(168, 85, 247, 0.6);
     }
 
     .card h1 {
@@ -79,6 +108,14 @@
       background: linear-gradient(90deg, #00f7ff, #a855f7);
       -webkit-background-clip: text;
       color: transparent;
+      animation: slideInDown 0.8s ease-out 0.1s both;
+      transition: all 0.3s ease;
+    }
+
+    .card h1:hover {
+      text-shadow: 0 0 30px rgba(168, 85, 247, 0.8), 0 0 20px rgba(0, 247, 255, 0.6);
+      filter: drop-shadow(0 0 8px #a855f7);
+      transform: scale(1.05);
     }
 
     .card h3 {
@@ -86,6 +123,13 @@
       font-weight: 400;
       color: #ccc;
       font-size: 1rem;
+      animation: slideInDown 0.8s ease-out 0.2s both;
+      transition: all 0.3s ease;
+    }
+
+    .card h3:hover {
+      color: #00f7ff;
+      transform: scale(1.02);
     }
 
     /* contact block — fresh green/pink/purple background (glassmorphism with vibrancy) */
@@ -97,6 +141,14 @@
       border-radius: 24px;
       border: 1px solid rgba(255, 255, 255, 0.25);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      animation: slideInDown 0.8s ease-out 0.3s both;
+      transition: all 0.3s ease;
+    }
+
+    .contact-info:hover {
+      box-shadow: 0 8px 30px rgba(168, 85, 247, 0.5), inset 0 0 15px rgba(0, 247, 255, 0.1);
+      border-color: rgba(168, 85, 247, 0.5);
+      transform: translateY(-3px);
     }
 
     .contact-row {
@@ -118,19 +170,30 @@
       font-size: 0.9rem;
       border: 1px solid rgba(255, 255, 255, 0.2);
       backdrop-filter: blur(4px);
-      transition: 0.2s;
+      transition: all 0.3s ease;
       color: white;
     }
 
     .contact-item:hover {
       background: #a855f7;
-      transform: scale(1.03);
+      transform: scale(1.08) translateY(-2px);
       border-color: #00f7ff;
+      box-shadow: 0 8px 15px rgba(168, 85, 247, 0.5), 0 0 15px rgba(0, 247, 255, 0.3);
+      font-weight: 500;
+    }
+
+    .contact-item:active {
+      transform: scale(0.95);
     }
 
     .contact-item i { 
       font-style: normal;
-      font-size: 1.2rem; 
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-item:hover i {
+      transform: rotate(15deg) scale(1.2);
     }
 
     /* profile links (leetcode, codeforces etc) */
@@ -140,6 +203,7 @@
       justify-content: center;
       gap: 12px;
       margin: 14px 0 6px;
+      animation: slideInDown 0.8s ease-out 0.4s both;
     }
 
     .profile-link {
@@ -154,15 +218,38 @@
       align-items: center;
       gap: 6px;
       border: 1px solid rgba(255,255,255,0.15);
-      transition: 0.2s;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
       backdrop-filter: blur(4px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-link::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .profile-link:hover::before {
+      left: 100%;
     }
 
     .profile-link:hover {
       background: #00f7ff;
       color: #000;
-      transform: scale(1.05);
+      transform: scale(1.12) translateY(-4px) rotate(2deg);
       border-color: #a855f7;
+      box-shadow: 0 12px 25px rgba(0, 247, 255, 0.5), 0 0 20px rgba(168, 85, 247, 0.4);
+      font-weight: 600;
+    }
+
+    .profile-link:active {
+      transform: scale(0.95);
     }
 
     .profile-link.linkedin { background: rgba(10, 102, 194, 0.3); }
@@ -174,7 +261,21 @@
     /* skills unchanged (except inner) */
     .skills {
       margin-top: 12px;
+      animation: slideInDown 0.8s ease-out both;
     }
+
+    .skills:nth-of-type(3) {
+      animation-delay: 0.5s;
+    }
+
+    .skills:nth-of-type(5) {
+      animation-delay: 0.6s;
+    }
+
+    .skills:nth-of-type(7) {
+      animation-delay: 0.7s;
+    }
+
     .skills span {
       display: inline-block;
       padding: 8px 12px;
@@ -182,11 +283,36 @@
       background: rgba(255, 255, 255, 0.1);
       border-radius: 15px;
       font-size: 13px;
-      transition: 0.3s;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      position: relative;
+      cursor: pointer;
     }
+
+    .skills span::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(168, 85, 247, 0.4);
+      border-radius: 15px;
+      z-index: -1;
+      transition: left 0.3s ease;
+    }
+
     .skills span:hover {
-      background: #a855f7;
-      transform: scale(1.1);
+      background: linear-gradient(135deg, #a855f7, #00f7ff);
+      transform: scale(1.18) translateY(-3px) rotate(-3deg);
+      border-color: #00f7ff;
+      color: white;
+      box-shadow: 0 8px 20px rgba(168, 85, 247, 0.5), 0 0 15px rgba(0, 247, 255, 0.3);
+      font-weight: 600;
+    }
+
+    .skills span:active {
+      transform: scale(0.95);
     }
 
     .section-title {
@@ -195,6 +321,14 @@
       color: #00f7ff;
       font-weight: 600;
       letter-spacing: 0.5px;
+      animation: slideInDown 0.8s ease-out both;
+      transition: all 0.3s ease;
+    }
+
+    .section-title:hover {
+      color: #a855f7;
+      text-shadow: 0 0 10px rgba(0, 247, 255, 0.8);
+      transform: scale(1.05);
     }
 
     /* github button (original but kept) */
@@ -207,12 +341,40 @@
       color: black;
       font-weight: 600;
       cursor: pointer;
-      transition: 0.3s;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
       font-size: 1rem;
+      animation: slideInDown 0.8s ease-out 0.8s both;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid transparent;
     }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    .btn:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+
     .btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 20px #a855f7;
+      transform: scale(1.12) translateY(-3px);
+      box-shadow: 0 15px 35px rgba(168, 85, 247, 0.7), 0 0 25px rgba(0, 247, 255, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .btn:active {
+      transform: scale(0.95);
     }
 
     /* ----- SNAKE GAME SECTION (compact & inside card) ----- */
@@ -220,6 +382,12 @@
       margin-top: 24px;
       border-top: 1px dashed rgba(255,255,255,0.3);
       padding-top: 20px;
+      animation: slideInDown 0.8s ease-out 0.9s both;
+      transition: all 0.3s ease;
+    }
+
+    .game-section:hover {
+      border-top: 1px dashed rgba(168, 85, 247, 0.6);
     }
 
     .game-title {
@@ -229,6 +397,14 @@
       margin-bottom: 12px;
       font-size: 1.2rem;
       text-shadow: 0 0 8px #a855f7;
+      transition: all 0.3s ease;
+      animation: slideInDown 0.8s ease-out both;
+    }
+
+    .game-title:hover {
+      color: #00f7ff;
+      text-shadow: 0 0 15px #a855f7, 0 0 10px #00f7ff;
+      transform: scale(1.05);
     }
 
     .snake-container {
@@ -240,6 +416,15 @@
       padding: 16px 10px 10px 10px;
       backdrop-filter: blur(6px);
       border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+      animation: slideInDown 0.8s ease-out 0.95s both;
+    }
+
+    .snake-container:hover {
+      background: rgba(0, 0, 0, 0.5);
+      border-color: rgba(168, 85, 247, 0.5);
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.3), inset 0 0 15px rgba(0, 247, 255, 0.05);
+      transform: translateY(-3px);
     }
 
     canvas#snakeCanvas {
@@ -250,6 +435,14 @@
       height: 220px;
       display: block;
       border: 2px solid #b874ff;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    canvas#snakeCanvas:hover {
+      box-shadow: 0 0 30px #a855f7, 0 0 20px #00f7ff, inset 0 0 15px rgba(168, 85, 247, 0.2);
+      border-color: #00f7ff;
+      transform: scale(1.02);
     }
 
     .snake-controls {
@@ -258,6 +451,7 @@
       margin: 12px 0 6px;
       flex-wrap: wrap;
       justify-content: center;
+      animation: slideInDown 0.8s ease-out 1s both;
     }
 
     .snake-btn {
@@ -269,30 +463,73 @@
       border-radius: 40px;
       backdrop-filter: blur(6px);
       border: 1px solid rgba(255,255,255,0.2);
-      transition: 0.2s;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
       font-weight: 500;
       cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .snake-btn::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(0, 247, 255, 0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.5s, height 0.5s;
+    }
+
+    .snake-btn:hover::after {
+      width: 200px;
+      height: 200px;
     }
 
     .snake-btn:hover {
-      background: #a855f7;
-      transform: scale(1.05);
-      box-shadow: 0 0 15px #00f7ff;
+      background: linear-gradient(135deg, #a855f7, #00f7ff);
+      transform: scale(1.12) translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0, 247, 255, 0.5), 0 0 15px rgba(168, 85, 247, 0.4);
+      border-color: #00f7ff;
+      color: white;
+      font-weight: 600;
+    }
+
+    .snake-btn:active {
+      transform: scale(0.95);
     }
 
     .score-badge {
       font-size: 0.9rem;
-      background: #1e1e3f;
+      background: linear-gradient(135deg, rgba(30, 30, 63, 0.9), rgba(168, 85, 247, 0.2));
       padding: 4px 16px;
       border-radius: 30px;
       display: inline-block;
       border: 1px solid #f0e68c;
+      transition: all 0.3s ease;
+      animation: slideInDown 0.8s ease-out 1s both;
+    }
+
+    .score-badge:hover {
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.4), rgba(0, 247, 255, 0.2));
+      box-shadow: 0 0 15px rgba(240, 230, 140, 0.5), inset 0 0 10px rgba(0, 247, 255, 0.1);
+      transform: scale(1.08);
     }
 
     .footer {
       margin-top: 18px;
       font-size: 13px;
       color: #bbb;
+      animation: slideInDown 0.8s ease-out 1.1s both;
+      transition: all 0.3s ease;
+    }
+
+    .footer:hover {
+      color: #00f7ff;
+      text-shadow: 0 0 10px rgba(0, 247, 255, 0.6);
+      transform: scale(1.03);
     }
   </style>
 </head>

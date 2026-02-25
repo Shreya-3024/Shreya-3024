@@ -1,119 +1,205 @@
-# 👋 Hi there, I'm Shreya Prajapati
+<div align="center">
+  
+  <!-- Animated floating orbs effect (CSS replicated in badges) -->
+  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=28&duration=3000&pause=500&color=00F7FF&center=true&vCenter=true&width=435&lines=Shreya+Prajapati;Full+Stack+Developer;MERN+%7C+AI+Enthusiast" alt="Typing SVG" />
+  
+  <!-- Floating orbs visual representation -->
+  <p>
+    <img src="https://img.shields.io/badge/-✦-00f7ff?style=flat-square&labelColor=0f0c29&color=rgba(255,255,255,0.05)" width="120" height="120" style="border-radius:50%;" />
+    <img src="https://img.shields.io/badge/-✦-a855f7?style=flat-square&labelColor=24243e&color=rgba(255,255,255,0.05)" width="120" height="120" style="border-radius:50%;" />
+  </p>
+</div>
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=500&color=00F7FF&center=true&vCenter=true&width=435&lines=Full+Stack+Developer;MERN+Stack+Expert;AI+Enthusiast;DSA+Problem+Solver" alt="Typing SVG" />
-</p>
+<!-- Main card container with glassmorphism effect -->
+<div align="center" style="perspective: 1000px;">
+  <div style="width: 440px; background: rgba(255, 255, 255, 0.06); backdrop-filter: blur(20px); border-radius: 20px; padding: 28px 24px; text-align: center; box-shadow: 0 0 40px rgba(138, 43, 226, 0.6); border: 1px solid rgba(255, 255, 255, 0.1; animation: pulse 3s ease-in-out infinite; margin: 20px auto;">
+    
+  <!-- Profile Header with hover effects -->
+  <h1 style="font-size: 28px; font-weight: 700; background: linear-gradient(90deg, #00f7ff, #a855f7); -webkit-background-clip: text; color: transparent; transition: all 0.3s ease;">Shreya Prajapati</h1>
+  <h3 style="margin-top: 6px; font-weight: 400; color: #ccc; font-size: 1rem; transition: all 0.3s ease;">Full Stack Developer (MERN) | AI Enthusiast</h3>
+
+  <!-- Contact Info Block - Green/Pink/Purple gradient background -->
+  <div style="margin: 20px 0 10px; padding: 18px 12px 12px; background: linear-gradient(145deg, rgba(255, 105, 180, 0.25), rgba(50, 205, 50, 0.25), rgba(147, 112, 219, 0.35)); backdrop-filter: blur(8px); border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.25); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); transition: all 0.3s ease;">
+    
+    <!-- Phone and Email -->
+    <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px 16px; margin: 8px 0;">
+      <div style="display: flex; align-items: center; gap: 8px; background: rgba(0, 0, 0, 0.3); padding: 6px 16px; border-radius: 40px; font-size: 0.9rem; border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(4px); transition: all 0.3s ease; color: white;">
+        <span style="font-size:1.2rem;">📱</span> +91 8470923024
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px; background: rgba(0, 0, 0, 0.3); padding: 6px 16px; border-radius: 40px; font-size: 0.9rem; border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(4px); transition: all 0.3s ease; color: white;">
+        <span style="font-size:1.2rem;">✉️</span> shreya3024@gmail.com
+      </div>
+    </div>
+
+    <!-- Profile Links with hover effects -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 14px 0 6px;">
+      
+      <!-- LeetCode -->
+      <a href="https://leetcode.com/u/shreya3024_/" style="background: rgba(255, 161, 22, 0.25); padding: 6px 14px; border-radius: 40px; font-size: 0.85rem; font-weight: 500; text-decoration: none; color: white; display: inline-flex; align-items: center; gap: 6px; border: 1px solid rgba(255,255,255,0.15); backdrop-filter: blur(4px); transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); position: relative; overflow: hidden;">
+        💻 LeetCode
+      </a>
+      
+      <!-- Codeforces -->
+      <a href="https://codeforces.com/profile/Lily45" style="background: rgba(73, 128, 240, 0.3); padding: 6px 14px; border-radius: 40px; font-size: 0.85rem; font-weight: 500; text-decoration: none; color: white; display: inline-flex; align-items: center; gap: 6px; border: 1px solid rgba(255,255,255,0.15); backdrop-filter: blur(4px); transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);">
+        ⚡ Codeforces
+      </a>
+      
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/shreya-prajapati-5185ab274/" style="background: rgba(10, 102, 194, 0.3); padding: 6px 14px; border-radius: 40px; font-size: 0.85rem; font-weight: 500; text-decoration: none; color: white; display: inline-flex; align-items: center; gap: 6px; border: 1px solid rgba(255,255,255,0.15); backdrop-filter: blur(4px); transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);">
+        🔗 LinkedIn
+      </a>
+      
+      <!-- GeeksforGeeks -->
+      <a href="https://www.geeksforgeeks.org/profile/shreyanhv4" style="background: rgba(47, 128, 0, 0.3); padding: 6px 14px; border-radius: 40px; font-size: 0.85rem; font-weight: 500; text-decoration: none; color: white; display: inline-flex; align-items: center; gap: 6px; border: 1px solid rgba(255,255,255,0.15); backdrop-filter: blur(4px); transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);">
+        👨‍💻 GeeksforGeeks
+      </a>
+    </div>
+  </div>
+
+  <!-- Core Skills Section -->
+  <div style="margin-top: 20px; font-size: 16px; color: #00f7ff; font-weight: 600;">Core Skills</div>
+  <div style="margin-top: 12px;">
+    <span style="display: inline-block; padding: 8px 12px; margin: 6px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; font-size: 13px; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); border: 1px solid rgba(255,255,255,0.2);">HTML</span>
+    <span style="display: inline-block; padding: 8px 12px; margin: 6px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; font-size: 13px; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);">CSS</span>
+    <span style="display: inline-block; padding: 8px 12px; margin: 6px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; font-size: 13px; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);">JavaScript</span>
+    <span style="display: inline-block; padding: 8px 12px; margin: 6px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; font-size: 13px; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);">React</span>
+    <span style="display: inline-block; padding: 8px 12px; margin: 6px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; font-size: 13px; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);">Node.js</span>
+    <span style="display: inline-block; padding: 8px 12px; margin: 6px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; font-size: 13px; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);">Express</span>
+    <span style="display: inline-block; padding: 8px 12px; margin: 6px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; font-size: 13px; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);">MongoDB</span>
+  </div>
+
+  <!-- Strong In Section -->
+  <div style="margin-top: 20px; font-size: 16px; color: #00f7ff; font-weight: 600;">Strong In</div>
+  <div style="margin-top: 12px;">
+    <span style="display: inline-block; padding: 8px 12px; margin: 6px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; font-size: 13px;">Java</span>
+    <span style="display: inline-block; padding: 8px 12px; margin: 6px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; font-size: 13px;">C++</span>
+    <span style="display: inline-block; padding: 8px 12px; margin: 6px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; font-size: 13px;">DSA</span>
+    <span style="display: inline-block; padding: 8px 12px; margin: 6px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; font-size: 13px;">OOP</span>
+    <span style="display: inline-block; padding: 8px 12px; margin: 6px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; font-size: 13px;">DBMS</span>
+    <span style="display: inline-block; padding: 8px 12px; margin: 6px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; font-size: 13px;">Computer Fundamentals</span>
+  </div>
+
+  <!-- Learning Section -->
+  <div style="margin-top: 20px; font-size: 16px; color: #00f7ff; font-weight: 600;">Learning</div>
+  <div style="margin-top: 12px;">
+    <span style="display: inline-block; padding: 8px 12px; margin: 6px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; font-size: 13px;">DevOps Basics</span>
+    <span style="display: inline-block; padding: 8px 12px; margin: 6px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; font-size: 13px;">Cloud Computing</span>
+    <span style="display: inline-block; padding: 8px 12px; margin: 6px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; font-size: 13px;">System Design</span>
+  </div>
+
+  <!-- GitHub Button with animations -->
+  <a href="https://github.com/Shreya-3024" style="display: inline-block; margin: 20px 6px 6px; padding: 12px 30px; border: none; border-radius: 30px; background: linear-gradient(90deg, #00f7ff, #a855f7); color: black; font-weight: 600; cursor: pointer; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); font-size: 1rem; text-decoration: none; position: relative; overflow: hidden; border: 2px solid transparent;">Visit GitHub</a>
+
+  <!-- Snake Game Section -->
+  <div style="margin-top: 24px; border-top: 1px dashed rgba(255,255,255,0.3); padding-top: 20px;">
+    <div style="color: #f0e68c; font-weight: 600; margin-bottom: 12px; font-size: 1.2rem; text-shadow: 0 0 8px #a855f7;">🐍 classic snake · chill mode</div>
+    
+    <!-- Game Container (visual representation) -->
+    <div style="display: flex; flex-direction: column; align-items: center; background: rgba(0, 0, 0, 0.4); border-radius: 28px; padding: 16px 10px 10px; backdrop-filter: blur(6px); border: 1px solid rgba(255, 255, 255, 0.2);">
+      
+      <!-- Canvas Simulation -->
+      <div style="width: 220px; height: 220px; background: #0a0c1a; border-radius: 20px; box-shadow: 0 0 20px #a855f7; border: 2px solid #b874ff; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+        <div style="color: #5ae8d5; font-size: 14px;">⬛⬛⬛⬛⬛⬛⬛⬛⬛</div>
+        <div style="color: #a0ff7c; font-size: 14px; margin: 5px 0;">⬛🐍⬛⬛⬛🍎⬛⬛⬛</div>
+        <div style="color: #5ae8d5; font-size: 14px;">⬛⬛⬛⬛⬛⬛⬛⬛⬛</div>
+        <div style="color: #ff92d0; font-size: 12px; margin-top: 10px;">score: 3</div>
+      </div>
+      
+      <!-- Game Controls -->
+      <div style="display: flex; gap: 14px; margin: 12px 0 6px; flex-wrap: wrap; justify-content: center;">
+        <button style="background: rgba(255, 255, 255, 0.1); border: none; color: white; font-size: 1.1rem; padding: 6px 14px; border-radius: 40px; backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.2); transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); cursor: pointer;">↻ restart</button>
+        <span style="font-size: 0.9rem; background: linear-gradient(135deg, rgba(30, 30, 63, 0.9), rgba(168, 85, 247, 0.2)); padding: 4px 16px; border-radius: 30px; border: 1px solid #f0e68c;">score: 0</span>
+      </div>
+      <div style="font-size:0.75rem; color:#b2b2ff;">⬆️⬇️⬅️➡️  or  WASD</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div style="margin-top: 18px; font-size: 13px; color: #bbb;">Building scalable & intelligent web systems 🚀</div>
+  </div>
+</div>
+
+<!-- Animated gradient background definition -->
+<style>
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 40px rgba(138, 43, 226, 0.6), 0 0 20px rgba(0, 247, 255, 0.3); }
+  50% { box-shadow: 0 0 60px rgba(168, 85, 247, 0.8), 0 0 30px rgba(0, 247, 255, 0.5); }
+}
+
+body {
+  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1a1a40);
+  background-size: 400% 400%;
+  animation: gradient 12s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Hover effects for all interactive elements */
+a:hover, button:hover, [style*="border-radius: 15px"]:hover {
+  transform: scale(1.12) translateY(-3px) rotate(-3deg) !important;
+  background: linear-gradient(135deg, #a855f7, #00f7ff) !important;
+  border-color: #00f7ff !important;
+  box-shadow: 0 12px 25px rgba(168, 85, 247, 0.5), 0 0 20px rgba(0, 247, 255, 0.4) !important;
+  font-weight: 600 !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+</style>
+
+<!-- Floating orbs effect -->
+<div style="position: fixed; top: 10%; left: 15%; width: 120px; height: 120px; background: rgba(255, 255, 255, 0.05); border-radius: 50%; animation: float 6s ease-in-out infinite; z-index: -1;"></div>
+<div style="position: fixed; bottom: 15%; right: 10%; width: 120px; height: 120px; background: rgba(255, 255, 255, 0.05); border-radius: 50%; animation: float 6s ease-in-out infinite; animation-delay: 2s; z-index: -1;"></div>
+
+<style>
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes slideInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+* {
+  animation: slideInDown 0.8s ease-out;
+}
+</style>
+
+---
 
 <div align="center">
   
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shreya-prajapati-5185ab274/)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Shreya-3024)
-[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/shreya3024_/)
-[![Codeforces](https://img.shields.io/badge/Codeforces-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white)](https://codeforces.com/profile/Lily45)
-[![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-2F8D46?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://www.geeksforgeeks.org/profile/shreyanhv4)
-  
-</div>
-
-## 📞 Contact Me
-
-<div align="center">
-  
-[![Phone](https://img.shields.io/badge/Phone-%2B91%208470923024-00C7B7?style=for-the-badge&logo=whatsapp&logoColor=white)](tel:+918470923024)
-[![Email](https://img.shields.io/badge/Email-shreya3024%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:shreya3024@gmail.com)
-
-</div>
-
----
-
-## 🚀 About Me
-
-I'm a passionate **Full Stack Developer** specializing in the **MERN stack** with a keen interest in **Artificial Intelligence**. I love building scalable web applications and solving complex problems through code. My journey in tech is driven by curiosity and the desire to create intelligent systems that make a difference.
-
-- 🔭 I'm currently working on **MERN stack projects** and exploring **AI integration**
-- 🌱 I'm learning **DevOps basics**, **Cloud Computing**, and **System Design**
-- 👯 I'm looking to collaborate on **open source projects** and **innovative web applications**
-- 💬 Ask me about **MERN stack, DSA, or web development**
-- ⚡ Fun fact: I enjoy combining creativity with logic to build beautiful, functional applications
-
----
-
-## 🛠️ Technical Skills
-
-### Core Technologies
-<p align="center">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
-  <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" />
-  <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />
-</p>
-
-### Programming Languages
-<p align="center">
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" />
-  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-</p>
-
-### Core Concepts
-<p align="center">
-  <img src="https://img.shields.io/badge/DSA-FF6F00?style=for-the-badge&logo=thealgorithms&logoColor=white" />
-  <img src="https://img.shields.io/badge/OOP-007396?style=for-the-badge&logo=java&logoColor=white" />
-  <img src="https://img.shields.io/badge/DBMS-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
-  <img src="https://img.shields.io/badge/Computer_Fundamentals-2C3E50?style=for-the-badge&logo=computer&logoColor=white" />
-</p>
-
-### Currently Learning
-<p align="center">
-  <img src="https://img.shields.io/badge/DevOps-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/Cloud_Computing-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" />
-  <img src="https://img.shields.io/badge/System_Design-FF6B6B?style=for-the-badge&logo=diagrams.net&logoColor=white" />
-</p>
-
----
-
 ## 📊 GitHub Stats
 
-<div align="center">
-  
-![Shreya's GitHub stats](https://github-readme-stats.vercel.app/api?username=Shreya-3024&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117)
+![Shreya's GitHub stats](https://github-readme-stats.vercel.app/api?username=Shreya-3024&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&icon_color=a855f7&title_color=00f7ff)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Shreya-3024&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Shreya-3024&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00f7ff)
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Shreya-3024&theme=tokyonight&hide_border=true&background=0D1117)
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Shreya-3024&theme=tokyonight&hide_border=true&background=0D1117&stroke=00f7ff&ring=a855f7&fire=a855f7&currStreakNum=00f7ff)
 
 </div>
 
 ---
 
-## 🏆 Coding Profiles
-
-| Platform | Username | Stats |
-|----------|----------|-------|
-| [LeetCode](https://leetcode.com/u/shreya3024_/) | shreya3024_ | ![LeetCode Stats](https://leetcode-stats-six.vercel.app/api?username=shreya3024_&theme=tokyonight) |
-| [Codeforces](https://codeforces.com/profile/Lily45) | Lily45 | Rating: Pupil |
-| [GeeksforGeeks](https://www.geeksforgeeks.org/profile/shreyanhv4) | shreyanhv4 | Coding Score: 500+ |
-
----
-
-## 🎮 Featured Project: Interactive Portfolio
-
-Check out my interactive portfolio card with a built-in **Classic Snake Game**! It features:
-
-- 🎨 **3D tilt effect** on mouse movement
-- 🌈 **Animated gradient background**
-- 🐍 **Playable Snake game** inside the profile card
-- 📱 **Responsive design** with contact information
-- 🔗 **Direct links** to all coding profiles
-
-[![Portfolio Project](https://img.shields.io/badge/View_Portfolio-FF6B6B?style=for-the-badge&logo=google-chrome&logoColor=white)](https://github.com/Shreya-3024/portfolio)
-
----
-
-## 📈 Weekly Development Breakdown
-
+<div align="center">
+  
+### 📈 Coding Activity
+  
 ```text
 JavaScript   12 hrs 30 mins  ████████████░░░░░░  62%
 React        4 hrs 15 mins   ████░░░░░░░░░░░░░░  21%

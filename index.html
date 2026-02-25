@@ -8,15 +8,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
 
 body{
   min-height:100vh;
-  background:linear-gradient(-45deg,#0f0,#ff1493,#8a2be2,#00ffcc);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(-45deg,#00ff88,#ff1493,#8a2be2,#00ffcc);
   background-size:400% 400%;
-  animation:gradient 12s ease infinite;
-  color:white;
+  animation:gradient 10s ease infinite;
   overflow-x:hidden;
+  color:white;
 }
 
 @keyframes gradient{
@@ -26,21 +34,24 @@ body{
 }
 
 .container{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:40px 20px;
+  perspective:1000px;
 }
 
 .card{
   width:420px;
   background:rgba(0,0,0,0.6);
-  backdrop-filter:blur(15px);
+  backdrop-filter:blur(20px);
   border-radius:20px;
   padding:30px;
   text-align:center;
   box-shadow:0 0 50px rgba(255,20,147,0.6);
-  transition:0.3s;
+  transition:transform 0.3s ease, box-shadow 0.3s ease;
+  animation:fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
 }
 
 .card:hover{
@@ -48,14 +59,19 @@ body{
   box-shadow:0 0 70px #00ffcc;
 }
 
-h1{
+.card h1{
   font-size:28px;
+  font-weight:700;
   background:linear-gradient(90deg,#00ffcc,#ff1493,#8a2be2);
   -webkit-background-clip:text;
   color:transparent;
 }
 
-h3{margin-top:8px;color:#ccc;}
+.card h3{
+  margin-top:8px;
+  font-weight:400;
+  color:#ddd;
+}
 
 .section-title{
   margin-top:20px;
@@ -69,19 +85,20 @@ h3{margin-top:8px;color:#ccc;}
   padding:8px 12px;
   margin:6px;
   background:rgba(255,255,255,0.1);
-  border-radius:20px;
+  border-radius:15px;
   font-size:13px;
   transition:0.3s;
 }
 
 .skills span:hover{
   background:#ff1493;
-  transform:scale(1.1);
+  transform:scale(1.15);
+  box-shadow:0 0 10px #8a2be2;
 }
 
 .contact a{
   display:block;
-  margin:8px 0;
+  margin:6px 0;
   color:#00ffcc;
   text-decoration:none;
   transition:0.3s;
@@ -92,28 +109,18 @@ h3{margin-top:8px;color:#ccc;}
   transform:scale(1.05);
 }
 
-.btn{
+.footer{
   margin-top:15px;
-  padding:10px 20px;
-  border:none;
-  border-radius:30px;
-  background:linear-gradient(90deg,#00ffcc,#ff1493);
-  color:black;
-  font-weight:600;
-  cursor:pointer;
-  transition:0.3s;
+  font-size:13px;
+  color:#bbb;
 }
 
-.btn:hover{
-  transform:scale(1.1);
-  box-shadow:0 0 20px #8a2be2;
-}
-
+/* Snake Game */
 canvas{
-  background:black;
   margin-top:20px;
+  background:black;
   border-radius:10px;
-  box-shadow:0 0 20px #00ffcc;
+  box-shadow:0 0 15px #00ffcc;
 }
 
 </style>
@@ -122,91 +129,103 @@ canvas{
 <body>
 
 <div class="container">
-  <div class="card">
+  <div class="card" id="card">
     <h1>Shreya Prajapati</h1>
     <h3>Full Stack Developer (MERN) | AI Enthusiast</h3>
 
     <div class="section-title">Core Skills</div>
     <div class="skills">
-      <span>React</span><span>Node.js</span><span>MongoDB</span>
-      <span>Java</span><span>DSA</span><span>DevOps Basics</span>
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>React</span>
+      <span>Node.js</span>
+      <span>MongoDB</span>
+    </div>
+
+    <div class="section-title">Strong In</div>
+    <div class="skills">
+      <span>Java</span>
+      <span>C++</span>
+      <span>DSA</span>
+      <span>OOP</span>
+      <span>DBMS</span>
     </div>
 
     <div class="section-title">Contact</div>
     <div class="contact">
-      📞 +91 8470923024
-      📧 shreya3024@gmail.com
+      📞 +91 8470923024  
+      📧 shreya3024@gmail.com  
       <a href="https://leetcode.com/u/shreya3024_/" target="_blank">LeetCode</a>
       <a href="https://codeforces.com/profile/Lily45" target="_blank">Codeforces</a>
       <a href="https://www.linkedin.com/in/shreya-prajapati-5185ab274/" target="_blank">LinkedIn</a>
       <a href="https://www.geeksforgeeks.org/profile/shreyanhv4" target="_blank">GeeksForGeeks</a>
     </div>
 
-    <button class="btn" onclick="window.location.href='https://github.com/Shreya-3024'">
-      Visit GitHub
-    </button>
+    <div class="section-title">Mini Snake Game 🎮</div>
+    <canvas id="game" width="250" height="250"></canvas>
 
-    <div class="section-title">🎮 Mini Snake Game</div>
-    <canvas id="game" width="300" height="300"></canvas>
-
+    <div class="footer">
+      Building scalable & intelligent systems 🚀
+    </div>
   </div>
 </div>
 
 <script>
+const card=document.getElementById("card");
+document.addEventListener("mousemove",(e)=>{
+  let x=(window.innerWidth/2 - e.pageX)/30;
+  let y=(window.innerHeight/2 - e.pageY)/30;
+  card.style.transform=`rotateY(${x}deg) rotateX(${y}deg)`;
+});
+document.addEventListener("mouseleave",()=>{
+  card.style.transform="rotateY(0deg) rotateX(0deg)";
+});
+
+/* Simple Snake Game */
 const canvas=document.getElementById("game");
 const ctx=canvas.getContext("2d");
-
-let box=15;
-let snake=[{x:9*box,y:10*box}];
+let box=10;
+let snake=[{x:100,y:100}];
 let direction="RIGHT";
-let food={x:Math.floor(Math.random()*19+1)*box,y:Math.floor(Math.random()*19+1)*box};
+let food={x:Math.random()*240,y:Math.random()*240};
 
-document.addEventListener("keydown",dir);
-
-function dir(e){
-if(e.keyCode==37 && direction!="RIGHT") direction="LEFT";
-if(e.keyCode==38 && direction!="DOWN") direction="UP";
-if(e.keyCode==39 && direction!="LEFT") direction="RIGHT";
-if(e.keyCode==40 && direction!="UP") direction="DOWN";
-}
+document.addEventListener("keydown",(e)=>{
+if(e.key==="ArrowLeft") direction="LEFT";
+if(e.key==="ArrowUp") direction="UP";
+if(e.key==="ArrowRight") direction="RIGHT";
+if(e.key==="ArrowDown") direction="DOWN";
+});
 
 function draw(){
 ctx.fillStyle="black";
-ctx.fillRect(0,0,canvas.width,canvas.height);
-
-for(let i=0;i<snake.length;i++){
-ctx.fillStyle=(i==0)?"#00ffcc":"white";
-ctx.fillRect(snake[i].x,snake[i].y,box,box);
-}
+ctx.fillRect(0,0,250,250);
 
 ctx.fillStyle="#ff1493";
 ctx.fillRect(food.x,food.y,box,box);
 
-let snakeX=snake[0].x;
-let snakeY=snake[0].y;
+let head={...snake[0]};
+if(direction==="LEFT") head.x-=box;
+if(direction==="UP") head.y-=box;
+if(direction==="RIGHT") head.x+=box;
+if(direction==="DOWN") head.y+=box;
 
-if(direction=="LEFT") snakeX-=box;
-if(direction=="UP") snakeY-=box;
-if(direction=="RIGHT") snakeX+=box;
-if(direction=="DOWN") snakeY+=box;
+if(head.x<0||head.y<0||head.x>240||head.y>240){
+snake=[{x:100,y:100}];
+}
 
-if(snakeX==food.x && snakeY==food.y){
-food={x:Math.floor(Math.random()*19+1)*box,y:Math.floor(Math.random()*19+1)*box};
+snake.unshift(head);
+if(Math.abs(head.x-food.x)<10 && Math.abs(head.y-food.y)<10){
+food={x:Math.random()*240,y:Math.random()*240};
 }else{
 snake.pop();
 }
 
-let newHead={x:snakeX,y:snakeY};
-
-if(snakeX<0 || snakeY<0 || snakeX>=canvas.width || snakeY>=canvas.height){
-clearInterval(game);
-alert("Game Over 😅");
+ctx.fillStyle="#00ffcc";
+snake.forEach(part=>ctx.fillRect(part.x,part.y,box,box));
 }
 
-snake.unshift(newHead);
-}
-
-let game=setInterval(draw,120);
+setInterval(draw,100);
 </script>
 
 </body>
